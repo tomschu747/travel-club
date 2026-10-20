@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function() {
             showError(usernameError, "Username is required.");
         }
     });
-    
+
     // Email validation
     email.addEventListener("input", function() {
         if (validateEmail()) {
@@ -111,5 +111,3 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
-
-f
