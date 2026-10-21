@@ -4,6 +4,9 @@ document.addEventListener("DOMContentLoaded", function() {
     const thumbs = document.querySelectorAll(".thumb");
     const caption = document.getElementById("image-caption");
 
+    // Form element itself
+    const form = document.querySelector("form");
+
     // All form input elements
     const formInputs = document.querySelectorAll(".form-group input");
 
@@ -53,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const validateTerms = () => terms.checked;
     const isFormValid = () => validateUsername() && validateEmail() && validatePassword() && validateTerms();
 
-    const form = document.querySelector("form");
+    // Form submission handling
     form.addEventListener("submit", function(e) {
         if (!isFormValid()) {
             e.preventDefault();
