@@ -49,10 +49,10 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-    // Validation Rules
+    // Validation functions for form fields
     const validateUsername = () => username.value.trim() !== "";
     const validateEmail = () => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value);
-    const validatePassword = () => password.value.length >= 6;
+    const validatePassword = () => password.value.length >= 8;
     const validateTerms = () => terms.checked;
     const isFormValid = () => validateUsername() && validateEmail() && validatePassword() && validateTerms();
 
@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded", function() {
             clearError(passwordError);
         } else {
             password.className = "error-border";
-            showError(passwordError, "Password must be at least 6 characters.");
+            showError(passwordError, "Password must be at least 8 characters.");
         }
     });
 
