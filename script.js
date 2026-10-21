@@ -81,8 +81,10 @@ document.addEventListener("DOMContentLoaded", function() {
     // Username validation
     username.addEventListener("input", function() {
         if (validateUsername()) {
+            username.className = "";
             clearError(usernameError);
         } else {
+            username.className = "error-border";
             showError(usernameError, "Username is required.");
         }
     });
@@ -90,8 +92,10 @@ document.addEventListener("DOMContentLoaded", function() {
     // Email validation
     email.addEventListener("input", function() {
         if (validateEmail()) {
+            email.className = "";
             clearError(emailError);
         } else {
+            email.className = "error-border";
             showError(emailError, "Invalid email address.");
         }
     });
@@ -99,8 +103,10 @@ document.addEventListener("DOMContentLoaded", function() {
     // Password validation
     password.addEventListener("input", function() {
         if (validatePassword()) {
+            password.className = "";
             clearError(passwordError);
         } else {
+            password.className = "error-border";
             showError(passwordError, "Password must be at least 6 characters.");
         }
     });
@@ -108,6 +114,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Terms and conditions validation
     terms.addEventListener("change", function() {
         if (validateTerms()) {
+            
             clearError(termsError);
         } else {
             showError(termsError, "You must accept the terms.");
